@@ -49,7 +49,7 @@ angular.module('app').controller('FilterController', function($scope, $http) {
 
 angular.module('app').controller('AppController', function($scope, $http) {
   $scope.obj = {
-    searchString: 'shibuya',
+    searchString: 'Banda Aceh',
     state: 'isLoading',
   };
 
@@ -60,7 +60,7 @@ angular.module('app').controller('AppController', function($scope, $http) {
   };
 
   $scope.obj = {
-    searchString: 'shibuya',
+    searchString: 'Banda Aceh',
     state: 'isLoading',
   };
 
