@@ -2,7 +2,7 @@
   <ons-toolbar class="toolbar">
     <div class="left">
       <ons-back-button ng-tap="backClick()">
-        Back 
+        Kembali 
       </ons-back-button>
     </div>
     <div class="center">{{title}}</div>
@@ -12,7 +12,7 @@
     <ons-icon icon="ion-load-c" spin="true"></ons-icon>
     <div></div>
   </div>
-  <div ng-show="obj.state == 'noResult'" class="noResults">No results found</div>
+  <div ng-show="obj.state == 'noResult'" class="noResults">Tidak ada hasil yang ditemukan</div>
   <ons-list ng-show="obj.state == 'loaded'">
     <ons-row>
       <ons-col style="min-height: 800">
@@ -21,11 +21,11 @@
       </ons-col>
     </ons-row>
     <ons-row class="border" style="padding-top: 5px; padding-bottom: 5px;">
-      <ons-col class="myC" style="align-self: center;">Address:</ons-col>
+      <ons-col class="myC" style="align-self: center;">Alamat</ons-col>
       <ons-col>{{address}}</ons-col>
     </ons-row>
     <ons-row class="border" style="padding-top: 5px; padding-bottom: 5px;">
-      <ons-col class="myC" style="align-self: center;">Open:</ons-col>
+      <ons-col class="myC" style="align-self: center;">Buka:</ons-col>
       <ons-col>{{openInfo}}</ons-col>
     </ons-row>
   </ons-list>
