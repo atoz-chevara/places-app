@@ -14,19 +14,19 @@
     <script src="./controller.js"></script>
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
-    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-blue-basic-theme.css"
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-purple-theme.css"
     />
     <link rel="stylesheet" href="styles.css" />
     <!-- CSP support mode (required for Windows Universal apps) -->
     <!-- --------------- App init --------------- -->
-    <title>Onsen UI Places App</title>
+    <title>Banda Aceh Places App</title>
   </head>
   
   <body>
     <ons-navigator var="navi">
       <ons-page ng-controller="AppController" var="appController">
         <ons-toolbar class="toolbar">
-          <div class="center">Onsen Places</div>
+          <div class="center">Banda Aceh Places</div>
           <div class="right">
             <ons-toolbar-button ng-click="filterClick()">Filter</ons-toolbar-button>
           </div>
@@ -38,7 +38,7 @@
           <ons-icon icon="ion-load-c" spin="true"></ons-icon>
           <div></div>
         </div>
-        <div ng-show="obj.state == 'noResult'" class="noResults">No results found</div>
+        <div ng-show="obj.state == 'noResult'" class="noResults">Tidak ada hasil yang ditemukan</div>
         <ons-list ng-show="obj.state == 'loaded'" class="myList fullHeight">
           <ons-list-item modifier="tappable" ng-click="cellClick(venue.venueID, $event)"
           ng-repeat="venue in venues">
