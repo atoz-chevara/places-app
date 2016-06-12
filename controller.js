@@ -17,6 +17,9 @@ angular.module('app').controller('FilterController', function($scope, $http) {
     if ($scope.records.outdoors) {
       outdoorSlider.setChecked(true);
     }
+    if ($scope.records.coffee) {
+      coffeeSlider.setChecked(true);
+    }
 
     foodSlider.on('change', function(slider) {
       $scope.records.food = slider.value;
@@ -28,6 +31,10 @@ angular.module('app').controller('FilterController', function($scope, $http) {
 
     shopSlider.on('change', function(slider) {
       $scope.records.shops = slider.value;
+    });
+    
+    coffeeSlider.on('change', function(slider) {
+      $scope.records.coffee = slider.value;
     });
 
   });
@@ -83,7 +90,8 @@ angular.module('app').controller('AppController', function($scope, $http) {
     records = {
       food: true,
       shops: false,
-      outdoors: false
+      outdoors: false,
+      coffee: false
     };
 
     localStorage.setItem('records', JSON.stringify(records));
@@ -98,7 +106,8 @@ angular.module('app').controller('AppController', function($scope, $http) {
       records = {
         food: true,
         shops: false,
-        outdoors: false
+        outdoors: false,
+        coffee: false
       };
       localStorage.setItem('records', JSON.stringify(records));
     }
@@ -108,6 +117,7 @@ angular.module('app').controller('AppController', function($scope, $http) {
     if (records.food) category.push('food');
     if (records.shops) category.push('shops');
     if (records.outdoors) category.push('outdoors');
+    if (records.coffee) category.push('coffee');
 
     var clientID = "V3E5SDW1GTEVKEQVYR2JW0L4LE0PFVDMPMFZJEY53JPFWOS5";
     var clientSecret = "2ADOCRKHVNWQTQDU5CGZHMVDKVNMDTAIMBXI3KAC5GB4NS0J";
